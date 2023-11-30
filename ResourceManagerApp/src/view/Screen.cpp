@@ -21,6 +21,11 @@ namespace view
 
 	void Screen::initText()
 	{
+		desc_.setFont(font_);
+		desc_.setCharacterSize(24);
+		desc_.setFillColor(sf::Color::Blue);
+		desc_.setString(" Nodes in topological order. Please try to click on the node or scroll the mouse wheel  \n Or type command and return: addnode A / addedge A B(B relies on A)/ enable A / disable A / printgraph");
+
 		user_input_.setFont(font_);
 		user_input_.setCharacterSize(24);
 		user_input_.setFillColor(sf::Color::Blue);
@@ -131,6 +136,7 @@ namespace view
 		// hud view
 		window_->setView(hud_view_);
 		window_->draw(user_input_);
+		window_->draw(desc_);
 		
 	}
 }

@@ -15,11 +15,16 @@ namespace view
 	private:
 		shared_ptr<model::World> world_;
 		shared_ptr<sf::RenderWindow> window_;
+
 		sf::Font font_;
+
 		sf::View game_view_;
 		sf::View hud_view_;
+
+		sf::Text desc_;
 		sf::Text user_input_;
 		sf::Text node_name_;
+
 		sf::CircleShape node_shape_;
 
 		// DAG parameter
